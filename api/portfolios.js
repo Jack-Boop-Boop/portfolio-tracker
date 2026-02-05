@@ -28,10 +28,8 @@ function createPortfolio(data) {
       maxH = 0;
     }
     widgets.push({
-      id: i,
-      portfolio_id: id,
-      widget_id: `${type}-${i}`,
-      widget_type: type,
+      id: `${type}-${i}`,
+      type: type,
       x, y,
       w: layout.w,
       h: layout.h,
