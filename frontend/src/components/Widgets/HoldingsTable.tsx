@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
 import { ArrowUpRight, ArrowDownRight } from 'lucide-react'
-import { Portfolio, Holding } from '../../types'
+import { Holding } from '../../types'
 import { api } from '../../services/api'
 
 interface HoldingsTableProps {
-  portfolio: Portfolio
   trackedNames: string[]
 }
 
@@ -18,7 +17,7 @@ const MOCK_HOLDINGS: Holding[] = [
   { ticker: 'AMZN', company: 'Amazon.com Inc.', value: '$100K - $250K', sector: 'Consumer', change_percent: 2.1 },
 ]
 
-export default function HoldingsTable({ portfolio, trackedNames }: HoldingsTableProps) {
+export default function HoldingsTable({ trackedNames }: HoldingsTableProps) {
   const [holdings, setHoldings] = useState<Holding[]>([])
   const [loading, setLoading] = useState(true)
   const [sortField, setSortField] = useState<keyof Holding>('value')
@@ -111,7 +110,7 @@ export default function HoldingsTable({ portfolio, trackedNames }: HoldingsTable
           </tr>
         </thead>
         <tbody>
-          {sortedHoldings.map((holding, i) => (
+          {sortedHoldings.map((holding) => (
             <tr
               key={holding.ticker}
               className="border-b border-terminal-border/50 hover:bg-terminal-hover/50 transition-colors"

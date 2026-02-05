@@ -17,9 +17,9 @@ const MOCK_PERFORMANCE: Record<string, { return: number; trades: number }> = {
 }
 
 const DEFAULT_PEOPLE = [
-  { id: 1, portfolio_id: 0, name: 'Nancy Pelosi', type: 'politician' as const },
-  { id: 2, portfolio_id: 0, name: 'Dan Crenshaw', type: 'politician' as const },
-  { id: 3, portfolio_id: 0, name: 'Warren Buffett', type: 'hedge_fund' as const },
+  { id: 1, portfolio_id: 0, name: 'Nancy Pelosi', type: 'politician' as const, image_url: undefined as string | undefined },
+  { id: 2, portfolio_id: 0, name: 'Dan Crenshaw', type: 'politician' as const, image_url: undefined as string | undefined },
+  { id: 3, portfolio_id: 0, name: 'Warren Buffett', type: 'hedge_fund' as const, image_url: undefined as string | undefined },
 ]
 
 export default function Watchlist({ portfolio, trackedNames }: WatchlistProps) {

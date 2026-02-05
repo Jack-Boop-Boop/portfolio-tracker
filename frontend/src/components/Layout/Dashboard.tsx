@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 import GridLayout from 'react-grid-layout'
-import { Portfolio, WidgetLayout } from '../../types'
+import { Portfolio } from '../../types'
 import WidgetWrapper from '../Widgets/WidgetWrapper'
 import SentimentGauge from '../Widgets/SentimentGauge'
 import HoldingsTable from '../Widgets/HoldingsTable'
